@@ -1,3 +1,6 @@
+{% load compress %}
+{% load static %}
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,8 +12,13 @@
 </head>
 <body>
 
-{% block content %}
+<nav>
+    <a href="{% url 'home' %}">Home</a
+    <a href="{% url 'about' %}">About</a>
+</nav>
 
+{% block content %}
+<!-- child template content goes here -->
 {% endblock content %}
 
 </body>
